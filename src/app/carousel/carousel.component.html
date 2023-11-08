@@ -1,0 +1,18 @@
+<div class="slider-container">
+    <p-carousel [value]="carousel" [numVisible]="1" [numScroll]="1" [circular]="true" [showIndicators]="false"
+        [autoplayInterval]="4000">
+        <ng-template let-carousel pTemplate="item">
+            <div class="slider-item">
+                <img [src]="carousel.imagen" alt="">
+
+                <div class="Info">
+                    <h3 class="title">{{ carousel.name }}</h3>
+                    <h4 class="description"> {{carousel.description}}</h4>
+                     <button class="callAction"> Buy Now</button>
+                </div>
+
+            </div>
+        </ng-template>
+    </p-carousel>
+
+</div>

@@ -1,0 +1,23 @@
+<header class="header-nav">
+    <a href="#" class="logo">RRETAIL</a>
+
+    <i  class="pi pi-bars"></i>
+    <div class="search-input">
+        <span class="p-input-icon-right">
+            <i class="pi pi-search"></i>
+            <input id="inputSearch" type="text" pKeyFilter="int" placeholder="Busca productos y servicios" pInputText
+                [(ngModel)]="inputSearch" />
+        </span>
+    </div>
+
+    <div class="menu" id="dropdowns">
+        <i class="pi  pi-language icons" style="font-size: 1rem"></i>
+        <p-dropdown [options]="langList" [(ngModel)]="selectedLang" optionLabel="name"></p-dropdown>
+        <i class="pi  pi-money-bill icons" style="font-size: 1rem"></i>
+        <p-dropdown id="moneyList" [options]="MoneyList" [(ngModel)]="selectedMoney" optionLabel="code"></p-dropdown>
+       
+        <button class="Lbutton" >Sign Up / Login</button>
+    </div>
+
+    
+</header>

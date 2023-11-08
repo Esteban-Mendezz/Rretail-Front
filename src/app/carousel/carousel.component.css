@@ -1,0 +1,78 @@
+
+.slider-container {
+  width: 1200px;
+  height: 570px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-item {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider-item img {
+  width: 100%;
+  height: 500px;
+  margin-bottom: 75px;
+  border-radius: 5px;
+}
+
+::ng-deep .p-carousel-prev {
+  flex-grow: 0;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  top: -30px;
+}
+::ng-deep .p-carousel-next {
+  flex-grow: 0;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  top: -30px;
+}
+
+.slider-item {
+  position: relative; 
+}
+
+
+
+.Info {
+  position: absolute; 
+  color: #F5FEFF;
+  margin-top: 80px;
+  margin-right: 220px; 
+  top: 40px; 
+  font-weight: 600;
+} 
+
+h3{
+  font-size: 40px;
+}
+
+.description{
+  font-size: 20px;
+  margin-top: 20px;
+  width: 700px;
+}
+
+.callAction{
+  height: 40px;
+  width: 100px;
+  margin-top: 20px;
+  background-color: white;
+  border: none;
+  font-size: 17px;
+}

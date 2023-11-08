@@ -1,0 +1,74 @@
+[
+    {
+      "id": "100",
+      "image": "assets/estilista.jpg",
+      "name": "Cortes de cabello",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia commodi quaerat hic porro odio ",
+        "price": "20.000",
+         "category": "moda",
+         "rating": "4.5",
+         "inventory": "INSTOCK"
+    },
+    {
+      "image": "assets/jardinero.jpg",
+      "name": "Jardineria y poda de arboles",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia commodi quaerat hic porro odio  ",
+        "price": "30.000",
+          "category": "Hogar",
+          "rating": "4.5",
+          "inventory": "INSTOCK"
+    },
+    {
+      "id": "101",
+      "image": "assets/limpieza.jpg",
+      "name": "Limpieza de casas",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia commodi quaerat hic porro odio  ",
+        "price": "40.000",
+          "category": "Hogar",
+          "rating": "4.5",
+          "inventory": "INSTOCK"
+    },
+    {
+      "id": "102",
+      "image": "assets/masajes.jpg",
+      "name": "Masajes relajantes",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia commodi quaerat hic porro odio  ",
+        "price": "50.000",
+          "category": "Salud",
+          "rating": "4.5",
+          "inventory": "INSTOCK"
+    },
+    {
+      "id": "103",
+      "image": "assets/peluquero.jpg",
+      "name": "Peluqueria ",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia commodi quaerat hic porro odio  ",
+        "price": "60.000",
+          "category": "moda",
+          "rating": "4.5",
+          "inventory": "INSTOCK"
+          
+    },
+    {
+      "id": "104",
+      "image": "assets/reparacion.jpg",
+      "name": "Reparacion de computadores",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia commodi quaerat hic porro odio  ",
+        "price": "70.000",
+          "category": "Tecnologia",
+          "rating": "4.5",
+          "inventory": "INSTOCK"
+    },
+    {
+      "id": "105",
+      "image": "assets/uñas.jpg",
+      "name": "Uñas acrilicas",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia commodi quaerat hic porro odio ",
+        "price": "80.000",
+          "category": "moda",
+          "rating": "4.5" ,
+           "inventory": "INSTOCK"
+
+    }
+  ]
+  
