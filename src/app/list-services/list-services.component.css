@@ -1,0 +1,132 @@
+.titleHeader {
+  margin-left: 30px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.product-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-item-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 270px;
+  height: 350px;
+  text-align: center;
+  background-color: white;
+}
+
+.carousel-container {
+  width: 100%;
+  margin-top: 30px;
+}
+.product-image {
+  width: 190px;
+  height: 190px;
+  margin-top: 15px;
+  border-radius: 5px;
+}
+
+
+
+.textSer {
+margin-top: 10px;
+
+
+}
+
+.textSer {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-align: center;
+    width: 200px;
+  }
+
+  h4{
+    color: #6e6c6c;
+    font-weight: 900;
+  }
+  
+  h6{
+    color: #acaaaa;
+    font-weight: 800;
+  }
+
+  .textInf {
+    margin: 10px 0;
+    display: flex;
+    align-items: center; 
+    gap: 15px;
+  }
+  h5{
+    font-size: 1.0em;
+    margin-left: 30px !important;
+
+  }
+
+
+@media (min-width: 360px) and (max-width: 500px) {
+  @media (min-width: 360px) and (max-width: 500px) {
+    .product-item-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 270px;
+      height: 370px;
+      text-align: center;
+      background-color: white;
+    }
+
+    .carousel-container {
+      margin-left: 50px;
+      width: 95%;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 50px;
+    }
+
+    .product-item {
+      width: 350px;
+      margin: auto;
+      border-radius: 5px;
+    }
+
+    .textSer {
+      margin-top: 12px;
+    }
+
+    ::ng-deep .p-rating,
+    ::ng-deep .p-rating-icon,
+    ::ng-deep .p-rating-icon-on {
+      color: yellow;
+    }
+
+    .textSer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .textInf {
+      font-size: 1em;
+      margin-right: 17px;
+    }
+  }
+}

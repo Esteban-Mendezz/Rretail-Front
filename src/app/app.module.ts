@@ -1,5 +1,5 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule ,HammerModule} from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,21 +15,27 @@ import { BodyComponent } from './body/body.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CarouselComponent } from './carousel/carousel.component';
 import { register } from 'swiper/element/bundle';
-import { ListProductsComponent } from './list-services/list-products.component';
 register();
+import { ListServicesComponent } from './list-services/list-services.component';
+
 import {RatingModule} from 'primeng/rating';
 import { CascadeSelectModule } from 'primeng/cascadeselect';
-import { ListServices1Component } from './list-services1/list-services1.component';
+import { PopularservicesComponent } from './popularservices/popularservices.component';
+import { DealsTheDayComponent } from './deals-the-day/deals-the-day.component';
+import { RegisterComponent } from './login/register/register.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     BodyComponent,
+    ListServicesComponent,
     CarouselComponent,
-    ListProductsComponent,
-    ListServices1Component
-    
+    PopularservicesComponent,
+    DealsTheDayComponent,
+    RegisterComponent,
+
     
    
   ],
@@ -45,7 +51,10 @@ import { ListServices1Component } from './list-services1/list-services1.componen
     CarouselModule,
     HttpClientModule,
     RatingModule,
-    CascadeSelectModule
+    CascadeSelectModule,
+    HammerModule,
+
+    
 
   ],
   providers: [],

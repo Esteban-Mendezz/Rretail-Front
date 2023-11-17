@@ -1,50 +1,34 @@
-import { Component, OnInit } from '@angular/core';
-import { ProductsService } from '../services/products.service';
+import { listService } from './../services/listServices.service';
+import { Component,OnInit } from '@angular/core';
 import { Services } from '../models/services';
 import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
-    selector: 'app-list-services1',
-    templateUrl: './list-services1.component.html',
-    styleUrls: ['./list-services1.component.css']
+    selector: 'app-list-services',
+    templateUrl: './list-services.component.html',
+    styleUrls: ['./list-services.component.css']
 })
-export class ListServices1Component implements OnInit {
+
+export class ListServicesComponent implements OnInit{
     services!: Services[];
-    responsiveOptions: any[] | undefined;
+    ratings: number[] = [];
     categories: any[] | undefined;
-
     selectedCategory: any;
-
     formGroup: FormGroup;
 
-    constructor(private productsServices: ProductsService) {
+    constructor(private productsServices: listService) {
         this.formGroup = new FormGroup({
             selectedCategory: new FormControl<object | null>(null)
         });
-    }
+     }
 
     ngOnInit() {
-        this.productsServices.getServices().then(services => {
+        this.productsServices.getlistServices().then(services => {
             this.services = services;
-        })
 
-        this.responsiveOptions = [
-            {
-                breakpoint: '1199px',
-                numVisible: 1,
-                numScroll: 1
-            },
-            {
-                breakpoint: '991px',
-                numVisible: 2,
-                numScroll: 1
-            },
-            {
-                breakpoint: '767px',
-                numVisible: 1,
-                numScroll: 1
-            }
-        ];
+
+        })
+       
 
 
 

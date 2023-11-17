@@ -1,7 +1,7 @@
 [
     {
       "id": "100",
-      "image": "assets/images/estilista.jpg",
+      "image": "assets/images/reloj.jpg",
       "name": "Cortes de cabello",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia commodi quaerat hic porro odio ",
         "price": "20.000",
@@ -10,7 +10,7 @@
          "inventory": "INSTOCK"
     },
     {
-      "image": "assets/images/jardinero.jpg",
+      "image": "assets/images/relojes.jpg",
       "name": "Jardineria y poda de arboles",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia commodi quaerat hic porro odio  ",
         "price": "30.000",
@@ -20,7 +20,7 @@
     },
     {
       "id": "101",
-      "image": "assets/images/limpieza.jpg",
+      "image": "assets/images/cel2.jpg",
       "name": "Limpieza de casas",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia commodi quaerat hic porro odio  ",
         "price": "40.000",
@@ -30,7 +30,7 @@
     },
     {
       "id": "102",
-      "image": "assets/images/masajes.jpg",
+      "image": "assets/images/cel.jpg",
       "name": "Masajes relajantes",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia commodi quaerat hic porro odio  ",
         "price": "50.000",
@@ -40,7 +40,7 @@
     },
     {
       "id": "103",
-      "image": "assets/images/peluquero.jpg",
+      "image": "assets/images/5.jpg",
       "name": "Peluqueria ",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia commodi quaerat hic porro odio  ",
         "price": "60.000",
@@ -51,7 +51,7 @@
     },
     {
       "id": "104",
-      "image": "assets/images/reparacion.jpg",
+      "image": "assets/images/6.jpg",
       "name": "Reparacion de computadores",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia commodi quaerat hic porro odio  ",
         "price": "70.000",
@@ -61,7 +61,7 @@
     },
     {
       "id": "105",
-      "image": "assets/images/uñas.jpg",
+      "image": "assets/images/7.jpg",
       "name": "Uñas acrilicas",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia commodi quaerat hic porro odio ",
         "price": "80.000",

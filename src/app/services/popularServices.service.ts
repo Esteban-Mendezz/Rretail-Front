@@ -6,12 +6,12 @@ import { Services } from '../models/services';
 @Injectable({
   providedIn: 'root'
 })
-export class ProductsService {
+export class popularService {
 
   constructor(private http: HttpClient) { }
 
-  getServices() {
-    return this.http.get<any>('assets/program-config/services.json')
+  getpopularServices() {
+    return this.http.get<any>('assets/program-config/popularServices.json')
       .toPromise()
       .then(res => res as Services[]);
   }

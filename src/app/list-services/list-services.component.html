@@ -1,7 +1,19 @@
 <div class="carousel-container">
-    <p-carousel [value]="services" [numVisible]="4" [showIndicators]="false" [numScroll]="1" [responsiveOptions]="responsiveOptions" [circular]="true">
+    <div class="header">
+        <p class="titleHeader" style="color: #5e5f63;font-weight: 700;"> List Services </p>
+        <form [formGroup]="formGroup">
+            <p-cascadeSelect class="cascade" formControlName="selectedCategory" [options]="categories"
+            optionLabel="name" optionGroupLabel="name" [optionGroupChildren]="['subCategories']"
+            [style]="{ minWidth: '8rem', width: '90px', height: '20px',}" placeholder="Categories"></p-cascadeSelect>
+
+        </form>
+
+    </div>
+   
+   
+    <p-carousel [value]="services" [numVisible]="5" [showIndicators]="false" [numScroll]="1"  [circular]="true">
         <ng-template pTemplate="header">
-            <p style="color: #5e5f63;font-weight: 700;">Popular Services</p>
+           
         </ng-template>
         <ng-template let-services let-i="index" pTemplate="item">
             <div class="product-item">
@@ -13,9 +25,9 @@
                         <h4 class="mb-1 textSer">{{ services.name }}</h4>
                         <h6 class="mt-0 mb-7 textSer">   {{ services.description }}</h6>
                       
-                        <div class="textSer" >
+                        <div class="textInf" >
                             <p-rating  class="textInf" [cancel]="false"></p-rating>
-                            <h6  class="mt-0 mb-7 textInf ">  $  {{ services.price }}</h6>
+                            <h5  class=" textInf ">  $  {{ services.price }}</h5>
                         </div>
                         
                     </div>

@@ -1,0 +1,35 @@
+<div class="parent-container">
+    <div class="container">
+        <h1>Deals of the Day</h1>
+
+        <div id="countdown">
+            <h6> {{countdown}} </h6>
+        </div>
+    </div>
+    <div class="carousel-container">
+        <p-carousel [value]="services" [numVisible]="4" [showIndicators]="false" [numScroll]="1" [circular]="true">
+            <ng-template pTemplate="header">
+
+            </ng-template>
+            <ng-template let-services let-i="index" pTemplate="item">
+                <div class="product-item">
+                    <div class="product-item-content">
+                        <div class="mb-3">
+                            <img [src]="services.image" [alt]="services.name" class="product-image" />
+                        </div>
+                        <div>
+                            <h4 class="mb-1 textSer">{{ services.name }}</h4>
+                            <h6 class="mt-0 mb-7 textSer"> {{ services.description }}</h6>
+
+                            <div class="textInf">
+                                <p-rating class="textInf" [cancel]="false"></p-rating>
+                                <h5 class=" textInf "> $ {{ services.price }}</h5>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </p-carousel>
+    </div>
+</div>

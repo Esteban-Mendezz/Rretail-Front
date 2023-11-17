@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-  showMenu = true;
+  showMenu = false;
 
 
   inputSearch: string = '';
@@ -48,10 +48,17 @@ export class HeaderComponent {
 
 
   }
-
-
-
-
+  toggleMenu() {
+    // Cambia el valor de showMenu cada vez que se llama a esta función
+    this.showMenu = !this.showMenu;
+  }
 
 
 }
+
+
+
+
+
+
+

@@ -1,18 +1,31 @@
+
 <div class="slider-container">
-    <p-carousel [value]="carousel" [numVisible]="1" [numScroll]="1" [circular]="true" [showIndicators]="false"
-        [autoplayInterval]="4000">
-        <ng-template let-carousel pTemplate="item">
-            <div class="slider-item">
-                <img [src]="carousel.imagen" alt="">
-
-                <div class="Info">
-                    <h3 class="title">{{ carousel.name }}</h3>
-                    <h4 class="description"> {{carousel.description}}</h4>
-                     <button class="callAction"> Buy Now</button>
-                </div>
-
-            </div>
-        </ng-template>
-    </p-carousel>
-
+  <div
+    class="slider-item"
+    *ngFor="let image of carousel; let i = index"
+    [ngClass]="{
+      'selected': i === selectedIndex,
+      'prev': i === selectedIndex - 1,
+      'next': i === selectedIndex + 1,
+      'hideLeft': i < selectedIndex - 1,
+      'hideRight': i > selectedIndex + 1
+    }"
+  >
+    <img [src]="image.imagen" alt="image.imgAlt" class="slider-img"
+    (panRight)="showPrev(i)" 
+    (panLeft)="showNext(i)"/>
+    <div class="Info">
+      <h3 class="title">{{ image.name }}</h3>
+      <h4 class="description"> {{image.description}}</h4>
+       <button class="callAction"> Buy Now</button>
+  </div>
+    <div *ngIf="i === selectedIndex" >
+      <div class="arow-left" (click)="showPrev(i)">
+        <i class="pi pi-chevron-left" style="font-size: 0.9rem"></i></div>
+      <div class="arow-right" (click)="showNext(i)">
+        <i class="pi pi-chevron-right " style="font-size: 0.9rem"></i></div>
+    </div>
+  
+  </div>
 </div>
+

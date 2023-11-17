@@ -1,23 +1,50 @@
 <header class="header-nav">
     <a href="#" class="logo">RRETAIL</a>
 
-    <i  class="pi pi-bars"></i>
+    <i id="menuIcon" class="pi pi-bars" (click)="toggleMenu()"></i>
     <div class="search-input">
         <span class="p-input-icon-right">
-            <i class="pi pi-search"></i>
-            <input id="inputSearch" type="text" pKeyFilter="int" placeholder="Busca productos y servicios" pInputText
-                [(ngModel)]="inputSearch" />
+            <i class="pi pi-search search"></i>
+            <input id="inputSearch" name="inputSearch" type="text" placeholder="Busca productos y servicios"
+                title="Busca productos y servicios" pInputText [(ngModel)]="inputSearch" />
         </span>
     </div>
 
-    <div class="menu" id="dropdowns">
-        <i class="pi  pi-language icons" style="font-size: 1rem"></i>
-        <p-dropdown [options]="langList" [(ngModel)]="selectedLang" optionLabel="name"></p-dropdown>
-        <i class="pi  pi-money-bill icons" style="font-size: 1rem"></i>
-        <p-dropdown id="moneyList" [options]="MoneyList" [(ngModel)]="selectedMoney" optionLabel="code"></p-dropdown>
-       
-        <button class="Lbutton" >Sign Up / Login</button>
-    </div>
 
-    
+    <span class="p-input-icon-left menu">
+        <i id="languageIcon" class="pi  pi-language icons iconMenu" style="font-size: 1rem"></i>
+        <p-dropdown id="langListDropdown" name="langListDropdown" [options]="langList" [(ngModel)]="selectedLang"
+            optionLabel="name" placeholder="Selecciona un idioma" title="Selecciona un idioma"></p-dropdown>
+    </span>
+
+    <span class="p-input-icon-left menu ">
+        <i id="moneyIcon" class="pi  pi-money-bill icons iconMenu" style="font-size: 1rem"></i>
+        <p-dropdown id="moneyListDropdown" name="moneyListDropdown" [options]="MoneyList" [(ngModel)]="selectedMoney"
+            optionLabel="code" placeholder="Selecciona una moneda" title="Selecciona una moneda"></p-dropdown>
+    </span>
+
+
+    <button id="signupLoginButton" name="signupLoginButton" class="Lbutton menu"
+        title="Iniciar sesión / Registrarse">Sign Up
+        / Login</button>
+
 </header>
+
+<div class="menuDesplegado "  *ngIf="showMenu">
+    <span class="p-input-icon-left menu" style="font-size: 0.5rem;">
+        <i id="languageIcon" class="pi  pi-language  iconMenu" style="font-size: 0.5rem"></i>
+        <p-dropdown id="langListDropdown" name="langListDropdown" [options]="langList" [(ngModel)]="selectedLang"
+            optionLabel="name" placeholder="Selecciona un idioma" title="Selecciona un idioma"></p-dropdown>
+    </span>
+
+    <span class="p-input-icon-left menu ">
+        <i id="moneyIcon" class="pi  pi-money-bill  iconMenu" style="font-size: 0.5rem"></i>
+        <p-dropdown id="moneyListDropdown" name="moneyListDropdown" [options]="MoneyList" [(ngModel)]="selectedMoney"
+            optionLabel="code" placeholder="Selecciona una moneda" title="Selecciona una moneda"></p-dropdown>
+    </span>
+
+
+    <button id="signupLoginButton" name="signupLoginButton" class="Lbutton menu"
+        title="Iniciar sesión / Registrarse">Sign Up
+        / Login</button>
+</div>
