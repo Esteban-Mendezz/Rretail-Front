@@ -1,5 +1,8 @@
 
-  
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
   .container-register {
     /* Tus estilos aquí */
     margin-top: 10px;

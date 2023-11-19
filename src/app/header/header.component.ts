@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { MoneyList } from './../models/moneyList';
 import { LangList } from './../models/langList';
 import { Component } from '@angular/core';
@@ -10,19 +11,15 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
   showMenu = false;
 
-
   inputSearch: string = '';
 
   langList: LangList[] | undefined;
   selectedLang: LangList | undefined;
 
-
   MoneyList: MoneyList[] | undefined;
   selectedMoney: MoneyList | undefined;
 
-
-
-
+  constructor(private router: Router) { } 
 
   ngOnInit() {
     this.langList = [
@@ -39,26 +36,20 @@ export class HeaderComponent {
       { name: 'Euro', code: 'EURO', },
       { name: 'Libra Esterlina', code: 'GBP', },
       { name: 'Peso Mexicano', code: 'MXN', },
-
     ];
 
     this.selectedLang = this.langList[0];
     this.selectedMoney = this.MoneyList[0];
-
-
-
   }
+
   toggleMenu() {
-    // Cambia el valor de showMenu cada vez que se llama a esta función
+
     this.showMenu = !this.showMenu;
   }
 
-
+  navigateToRegister() {
+    console.log('Navigating to /register');
+    this.router.navigate(['/register']);
+  }
+  
 }
-
-
-
-
-
-
-

@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 header {
   padding: 0 80px;
   box-sizing: border-box;
@@ -22,7 +26,7 @@ header {
 #menuIcon {
   font-size: 25px;
   color: #5e5f63;
-  pointer-events: none;
+
 }
 
 #inputSearch {
@@ -73,13 +77,15 @@ header {
 }
 
 .Lbutton {
-  display: block;
+
   width: 130px;
   height: 40px;
   background-color: #f4f5f9;
   border: none;
   font-size: 17px;
   border-radius: 5px;
+  z-index: 9999;
+  cursor: pointer;
 }
 
 .Lbutton:hover {
@@ -120,7 +126,7 @@ header {
   }
 
   .Lbutton {
-    display: block;
+
     font-size: 14px;
   }
 }
@@ -222,7 +228,7 @@ header {
      margin-top: 4px;
     }
   
-    .Lbutton {
+    #signupLoginButton {
       height: 20px;
       width: 70px;
       font-size: 10px;

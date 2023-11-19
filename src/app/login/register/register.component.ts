@@ -1,4 +1,5 @@
-    import { Component } from '@angular/core';
+import { UsersService } from './../../services/users.service';
+    import { Component, inject } from '@angular/core';
     import { FormControl, FormGroup } from '@angular/forms';
 
     @Component({
@@ -8,6 +9,7 @@
     })
     export class RegisterComponent {
       formulario: FormGroup;
+      userService = inject(UsersService);
       userTypes = ['User', 'Provider', 'Customer'];
       selectedType = 'User';
 
@@ -45,7 +47,8 @@
       
       
 
-      onSubmit() {
-        
-      }
+      async onSubmit() {
+     const response =  await  this.userService.register(this.formulario.value);
+     console.log(response);
+     }
     }
