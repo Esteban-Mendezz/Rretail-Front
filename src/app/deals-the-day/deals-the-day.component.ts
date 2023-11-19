@@ -17,7 +17,7 @@ import { Carousel } from './../models/carouselList';
     constructor(private countdownService: CountdownService) { }
 
     ngOnInit(): void {
-      const endDate = new Date('2023-11-17T00:00:00');
+      const endDate = new Date('2023-11-20T00:00:00');
       // Cambia a esta fecha
       this.countdownSubscription = this.countdownService.getCountdown(endDate).subscribe(
         countdown => this.countdown = countdown

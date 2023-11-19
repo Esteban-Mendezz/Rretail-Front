@@ -13,17 +13,23 @@ export class CountdownService {
     return interval(1000).pipe(
       map(() => {
         const now = new Date();
-        const distance = endDate.getTime() - now.getTime();
-
+        let distance = endDate.getTime() - now.getTime();
+  
+     
+        if (distance <= 0) {
+          distance = 0;
+        }
+  
         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
         const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
+  
         return ` ${hours}: ${minutes}:${seconds}`;
       })
     );
   }
+  
 
   getDeals() {
     return this.http.get<any>('assets/program-config/deals.json')
