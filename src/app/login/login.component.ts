@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { initFlowbite } from 'flowbite';
 
 @Component({
   selector: 'app-login',
@@ -19,5 +20,8 @@ export class LoginComponent {
 
   onSubmit(){
     
+  }
+  ngOnInit(): void {
+    initFlowbite();
   }
 }
