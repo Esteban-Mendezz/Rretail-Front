@@ -1,9 +1,40 @@
-<div class="container">
- <div class="loginContainer">
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+    <select formControlName="userType" (change)="onTypeChange($event)">
+      <option *ngFor="let type of userTypes" [value]="type">{{type}}</option>
+    </select>
   
 
- </div>
+    <div *ngIf="selectedType === 'User'">
+      <input type="text" formControlName="userName" placeholder="Nombre de usuario">
+      <input type="email" formControlName="email" placeholder="Correo electrónico">
+      <input type="password" formControlName="password" placeholder="Contraseña">
+      <input type="tel" formControlName="cellphone" placeholder="Teléfono móvil">
+      <input type="text" formControlName="address" placeholder="Dirección">
+    </div>
+  
 
+    <div *ngIf="selectedType === 'Provider'">
+      <input type="text" formControlName="social_reason" placeholder="Razón social">
+      <input type="text" formControlName="person_type" placeholder="Tipo de persona">
+      <input type="text" formControlName="nit" placeholder="NIT">
+      <input type="tel" formControlName="cellphone" placeholder="Teléfono móvil">
+      <input type="email" formControlName="email" placeholder="Correo electrónico">
+      <input type="password" formControlName="password" placeholder="Contraseña">
+      <input type="text" formControlName="address" placeholder="Dirección">
+    </div>
 
-
-</div>
+    <div *ngIf="selectedType === 'Customer'">
+        <input type="text" formControlName="userName" placeholder="Nombre de usueario">
+      <input type="text" formControlName="name" placeholder="Nombre">
+      <input type="text" formControlName="lastname" placeholder="Apellido">
+      <input type="text" formControlName="document_type" placeholder="Tipo de documento">
+      <input type="text" formControlName="document_number" placeholder="Número de documento">
+      <input type="tel" formControlName="cellphone" placeholder="Teléfono móvil">
+      <input type="email" formControlName="email" placeholder="Correo electrónico">
+      <input type="password" formControlName="password" placeholder="Contraseña">
+      <input type="text" formControlName="address" placeholder="Dirección">
+    </div>
+  
+    <button type="submit">Enviar</button>
+  </form>
+  

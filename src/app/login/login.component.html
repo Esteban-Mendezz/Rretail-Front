@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="container-login">
+        <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+
+            <div class="mb-3">
+                <label>Email</label>
+                <input type="email" class="form-control" formControlName="email">
+            </div>
+            <div class="mb-3">
+                <label>password</label>
+                <input type="password" class="form-control" formControlName="password">
+            </div>
+            <input type="submit" value="enviar">
+        </form>
+    </div>
+</div>

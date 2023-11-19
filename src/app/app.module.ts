@@ -23,6 +23,7 @@ import { CascadeSelectModule } from 'primeng/cascadeselect';
 import { PopularservicesComponent } from './popularservices/popularservices.component';
 import { DealsTheDayComponent } from './deals-the-day/deals-the-day.component';
 import { RegisterComponent } from './login/register/register.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { RegisterComponent } from './login/register/register.component';
     PopularservicesComponent,
     DealsTheDayComponent,
     RegisterComponent,
+    LoginComponent,
 
     
    
