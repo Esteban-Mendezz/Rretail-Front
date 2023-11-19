@@ -10,8 +10,8 @@ import { UsersService } from './../../services/users.service';
     export class RegisterComponent {
       formulario: FormGroup;
       userService = inject(UsersService);
-      userTypes = ['User', 'Provider', 'Customer'];
-      selectedType = 'User';
+      userTypes = [ 'Provider', 'Customer'];
+      selectedType = 'Customer';
 
       constructor() {
         this.formulario = this.getUserForm();
@@ -19,7 +19,7 @@ import { UsersService } from './../../services/users.service';
 
       getUserForm() {
         return new FormGroup({
-          userType: new FormControl(this.userTypes[0]),
+          userType: new FormControl(this.userTypes[1]),
           userName: new FormControl(''),
           password: new FormControl(''),
           email: new FormControl(''),

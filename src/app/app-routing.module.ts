@@ -9,7 +9,7 @@ import { RegisterComponent } from './login/register/register.component';
 const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'body', component: BodyComponent },
-  { path: '', redirectTo: '/body', pathMatch: 'full' }, // redirige a '/body' por defecto
+  { path: '', redirectTo: '/body', pathMatch: 'full' }, 
   { path: 'login', component: LoginComponent },
   { path: '**', redirectTo: '/body' } 
 ];
