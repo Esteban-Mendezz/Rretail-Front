@@ -24,6 +24,8 @@ import { PopularservicesComponent } from './popularservices/popularservices.comp
 import { DealsTheDayComponent } from './deals-the-day/deals-the-day.component';
 import { RegisterComponent } from './login/register/register.component';
 import { LoginComponent } from './login/login.component';
+import { BodyInfoComponent } from './body-info/body-info.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -37,6 +39,8 @@ import { LoginComponent } from './login/login.component';
     DealsTheDayComponent,
     RegisterComponent,
     LoginComponent,
+    BodyInfoComponent,
+    FooterComponent,
 
     
    

@@ -1,9 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{html,ts}",
-    "./node_modules/flowbite/**/*.js"
-  ],
+  purge: {
+    enabled: process.env.NODE_ENV === 'production',
+    content: [
+      "./src/**/*.{html,ts}",
+      "./node_modules/flowbite/**/*.js"
+    ],
+    options: {
+      safelist: [/./], // Esto evitará que se eliminen todas las clases
+    },
+  },
   theme: {
     extend: {
       colors: {

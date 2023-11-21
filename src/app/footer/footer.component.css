@@ -1,0 +1,8 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+section{
+    background-color:#f4f5f9 ;
+}

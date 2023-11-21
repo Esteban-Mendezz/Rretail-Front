@@ -1,0 +1,8 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h2{
+    color: #5e5f63 !important;
+}
