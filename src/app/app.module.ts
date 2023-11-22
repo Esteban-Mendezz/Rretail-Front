@@ -26,6 +26,7 @@ import { RegisterComponent } from './login/register/register.component';
 import { LoginComponent } from './login/login.component';
 import { BodyInfoComponent } from './body-info/body-info.component';
 import { FooterComponent } from './footer/footer.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { FooterComponent } from './footer/footer.component';
     LoginComponent,
     BodyInfoComponent,
     FooterComponent,
+    UserProfileComponent,
 
     
    
