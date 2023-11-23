@@ -26,7 +26,6 @@ export class AuthService {
         const headers = response.headers;
         headers.keys().forEach(key => {
           const value = headers.get(key);
-          console.log(`Header: ${key}, Value: ${value}`);
         });
       })
     );
