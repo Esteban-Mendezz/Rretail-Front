@@ -1,6 +1,6 @@
 import { AuthService } from './../services/auth.service';
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, NgForm } from '@angular/forms';
 import { initFlowbite } from 'flowbite';
 
 @Component({
@@ -10,11 +10,16 @@ import { initFlowbite } from 'flowbite';
 })
 export class LoginComponent {
 
+  datosFormulario = {
+    userName: '',
+    password: ''
+  };
 
   constructor(private authService: AuthService) {}
 
-  onSubmit(){
-    this.authService.login(this.loginFormulario.value.username, this.loginFormulario.value.password).subscribe(
+  submitForm(formulario: NgForm){
+
+    this.authService.login(this.datosFormulario.userName, this.datosFormulario.password).subscribe(
       data => {
         console.log(data);
       },
@@ -23,6 +28,7 @@ export class LoginComponent {
       }
     );
   }
+
   ngOnInit(): void {
     initFlowbite();
   }
