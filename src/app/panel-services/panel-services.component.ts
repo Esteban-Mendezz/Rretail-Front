@@ -1,5 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { SelectedServiceService } from '../services/selected-service.service'; // Importa el servicio
+export interface Comentario {
+  id: number;
+  authorImage: string;
+  author: string;
+  date: Date;
+  text: string;
+  // ... otras propiedades ...
+}
 
 @Component({
   selector: 'app-panel-services',
@@ -17,26 +25,20 @@ export class PanelServicesComponent implements OnInit {
     this.service = this.selectedServiceService.getSelectedService();
   }
 
-  comments: Comentario[] = []; 
+comments: Comentario[] = [];
 
   submitComment(commentText: string) {
-  
     const nuevoComentario: Comentario = {
-      autor: 'Usuario Actual', 
-      fecha: new Date(),
-      texto: commentText
+      id: this.comments.length + 1, 
+      authorImage: 'assets/images/profile-picture.jpg', 
+      author: 'esteban mendez',
+      date: new Date(),
+      text: commentText,
+      
     };
 
- 
     this.comments.push(nuevoComentario);
   }
-}
-
-
-interface Comentario {
-  autor: string;
-  fecha: Date;
-  texto: string;
 }
 
 
