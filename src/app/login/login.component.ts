@@ -1,3 +1,4 @@
+import { AuthService } from './../services/auth.service';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { initFlowbite } from 'flowbite';
@@ -8,18 +9,19 @@ import { initFlowbite } from 'flowbite';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
- 
-  formulario: FormGroup;
- 
-  constructor() {
-    this.formulario = new FormGroup({
-      email: new FormControl(''),
-      password: new FormControl(''),
-    });
-  }
+
+
+  constructor(private authService: AuthService) {}
 
   onSubmit(){
-    
+    this.authService.login(this.loginFormulario.value.username, this.loginFormulario.value.password).subscribe(
+      data => {
+        console.log(data);
+      },
+      err => {
+        console.log(err);
+      }
+    );
   }
   ngOnInit(): void {
     initFlowbite();
