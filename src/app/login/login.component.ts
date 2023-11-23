@@ -1,6 +1,7 @@
+import { HttpResponse } from '@angular/common/http';
 import { AuthService } from './../services/auth.service';
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, NgForm } from '@angular/forms';
+import { NgForm } from '@angular/forms';
 import { initFlowbite } from 'flowbite';
 
 @Component({
@@ -11,7 +12,7 @@ import { initFlowbite } from 'flowbite';
 export class LoginComponent {
 
   datosFormulario = {
-    userName: '',
+    username: '',
     password: ''
   };
 
@@ -19,12 +20,11 @@ export class LoginComponent {
 
   submitForm(formulario: NgForm){
 
-    this.authService.login(this.datosFormulario.userName, this.datosFormulario.password).subscribe(
-      data => {
-        console.log(data);
-      },
-      err => {
-        console.log(err);
+    const datosFormulario = formulario.form.value;
+
+    this.authService.login(datosFormulario.userName, datosFormulario.password).subscribe(
+      (response: HttpResponse<any>) => {
+        localStorage.setItem('token', response.body.token);
       }
     );
   }
