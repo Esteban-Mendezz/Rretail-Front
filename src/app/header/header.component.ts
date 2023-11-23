@@ -21,6 +21,7 @@ export class HeaderComponent {
   MoneyList: MoneyList[] | undefined;
   selectedMoney: MoneyList | undefined;
   private authSubcription: Subscription;
+  mostrarModal: boolean = false;
 
   constructor(private router: Router, private authService: AuthService) {
     this.authSubcription = this.authService.isLoggedIn$.subscribe(
@@ -74,5 +75,9 @@ export class HeaderComponent {
 
   ngOnDestroy() {
     this.authSubcription.unsubscribe();
+  }
+
+  mostrarOcultarModal(){
+    this.mostrarModal = !this.mostrarModal;
   }
 }
