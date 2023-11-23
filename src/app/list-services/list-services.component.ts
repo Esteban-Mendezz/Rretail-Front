@@ -1,7 +1,9 @@
-import { listService } from './../services/listServices.service';
-import { Component,OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Services } from '../models/services';
 import { FormControl, FormGroup } from '@angular/forms';
+import { listService } from './../services/listServices.service'; // Importa el servicio que obtiene los servicios del json
+import { SelectedServiceService } from '../services/selected-service.service'; // Importa el servicio que guarda y obtiene el servicio seleccionado
+import { Router } from '@angular/router'; // Importa el router para navegar al otro componente
 
 @Component({
     selector: 'app-list-services',
@@ -16,7 +18,7 @@ export class ListServicesComponent implements OnInit{
     selectedCategory: any;
     formGroup: FormGroup;
 
-    constructor(private productsServices: listService) {
+    constructor(private productsServices: listService, private selectedServiceService: SelectedServiceService, private router: Router) {
         this.formGroup = new FormGroup({
             selectedCategory: new FormControl<object | null>(null)
         });
@@ -25,12 +27,7 @@ export class ListServicesComponent implements OnInit{
     ngOnInit() {
         this.productsServices.getlistServices().then(services => {
             this.services = services;
-
-
         })
-       
-
-
 
         this.categories = [
             {
@@ -68,5 +65,13 @@ export class ListServicesComponent implements OnInit{
             }
         ];
 
+    }
+
+    // Este método se ejecuta cuando se hace click en un servicio del carousel
+    selectService(service: any) {
+      // Llama al método del servicio para guardar el servicio seleccionado
+      this.selectedServiceService.setSelectedService(service);
+      // Navega al otro componente
+      this.router.navigate(['/detalleService']);
     }
 }

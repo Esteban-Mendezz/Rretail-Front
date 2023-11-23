@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/body', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'perfil', component: UserProfileComponent },
-  { path: 'services', component: PanelServicesComponent },
+  { path: 'detalleService', component: PanelServicesComponent },
 
   { path: '**', redirectTo: '/body' }
 ];

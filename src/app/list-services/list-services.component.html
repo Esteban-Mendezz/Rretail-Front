@@ -16,7 +16,7 @@
            
         </ng-template>
         <ng-template let-services let-i="index" pTemplate="item">
-            <div class="product-item">
+            <div class="product-item"  (click)="selectService(services)">
                 <div class="product-item-content">
                     <div class="mb-3">
                         <img [src]="services.image" [alt]="services.name" class="product-image" />
