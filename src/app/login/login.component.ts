@@ -3,6 +3,7 @@ import { AuthService } from './../services/auth.service';
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { initFlowbite } from 'flowbite';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +17,7 @@ export class LoginComponent {
     password: ''
   };
 
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
   submitForm(formulario: NgForm){
 
@@ -24,7 +25,7 @@ export class LoginComponent {
 
     this.authService.login(datosFormulario.userName, datosFormulario.password).subscribe(
       (response: HttpResponse<any>) => {
-        localStorage.setItem('token', response.body.token);
+        this.router.navigate(['/body']);
       }
     );
   }
