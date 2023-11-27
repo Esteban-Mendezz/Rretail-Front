@@ -10,8 +10,8 @@ import { PanelServicesComponent } from './panel-services/panel-services.componen
 const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'body', component: BodyComponent },
-  { path: '', redirectTo: '/body', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'perfil', component: UserProfileComponent },
   { path: 'detalleService', component: PanelServicesComponent },
 
